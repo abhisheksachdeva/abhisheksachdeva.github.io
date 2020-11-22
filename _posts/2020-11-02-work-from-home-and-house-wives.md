@@ -32,7 +32,7 @@ In 21st century, we are still stuck at this question.
 
 A few cents:
 - Feeling of being independent, pride.
-- Share family's financial responibilies and delegate some household responsibilities to their partners. Household work isn't easy either, everyone should have an option to see both sides.
+- Share family's financial responsibilities and delegate some household responsibilities to their partners. Household work isn't easy either, everyone should have an option to see both sides.
 - It helps the economy.
 
 
