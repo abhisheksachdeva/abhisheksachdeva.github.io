@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Peronsl website of Abhishek Sachdeva.
 twitter_username: abskscdv
 github_username: abhisheksachdeva
-minimal_mistakes_skin: default
+minimal_mistakes_skin: dark
 search: true
 url: "https://sachdeva.xyz"
 
