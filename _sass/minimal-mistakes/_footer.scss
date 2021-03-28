@@ -22,7 +22,7 @@
     margin-right: auto;
     margin-top: 0em;
     max-width: 100%;
-    padding: 0 1em 1em;
+    padding: 0 1em 0.5em;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -49,6 +49,7 @@
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;
+  padding-top: 0px;
 }
 
 .page__footer-follow {
@@ -61,10 +62,10 @@
   li {
     display: inline-block;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
-    text-transform: uppercase;
+    text-transform: none;
   }
 
   li + li:before {
