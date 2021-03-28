@@ -5,6 +5,7 @@ date: Mon Nov 2 01:21:20 IST 2020
 last_modified_at: Sun Nov 22 23:49:12 IST 2020
 tags: 
   - Opinion
+layout: posts
 ---
 
 Whole world is working from home where as the people who stay at home, the housewives, for their whole life still can't find work that can be done from home.

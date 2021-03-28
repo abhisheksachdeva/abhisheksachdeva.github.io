@@ -78,6 +78,11 @@ author:
   #     icon: "fab fa-fw fa-instagram"
   #     url: "https://instagram.com/"
 
+collections:
+  archive:
+    output: true
+    permalink: /:collection/:path/
+
 footer:
   links:
     - label: "Twitter"
@@ -103,7 +108,17 @@ defaults:
     values:
       layout: single
       author_profile: false
-
+  # _portfolio
+  - scope:
+      path: ""
+      type: archive
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: true
+      share: true
+      related: false
 category_archive:
   type: liquid
   path: /categories/
