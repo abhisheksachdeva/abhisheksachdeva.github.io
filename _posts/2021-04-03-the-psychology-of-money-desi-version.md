@@ -10,10 +10,15 @@ tags:
 ---
 The psychology of Money - Desi version. JK, A few things I tried to motivate myself to invest.
 
-Started with this question.
-> What returns do I expect? 10%, 15%, 100%? 
+### Background
+I knew that investments are important but didn't have courage to do it for various reasons. Primary being, lack of knowledge and fear of losing the invested money.
 
-My target was to beat the savings account rate for liquid, less volatile investments (~3%) and the Inflation rate for little risky/volatile/non-liquid investments (~7%)
+So, I tried to re-define my thoughts around investing.
+
+### Started with a question
+> What returns do I expect? 10%, 15%, 100%? Nah!
+
+My target was to beat the *savings account's Interest rate* for liquid, less volatile investments (~3%) and the *Inflation rate* for little risky/volatile/non-liquid investments (~7%)
 
 _That's it._
 
