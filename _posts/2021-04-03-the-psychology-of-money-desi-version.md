@@ -10,21 +10,18 @@ tags:
 ---
 The psychology of Money - Desi version. JK, A few things I tried to motivate myself to invest.
 
-### Background
+## Background
 I knew that investments are important but didn't have courage to do it for various reasons. Primary being, lack of knowledge and fear of losing the invested money.
-
 So, I tried to re-define my thoughts around investing.
 
-### Started with a question
+## Started with a question
 > What returns do I expect? 10%, 15%, 100%? Nah!
 
-My target was to beat the *savings account's Interest rate* for liquid, less volatile investments (~3%) and the *Inflation rate* for little risky/volatile/non-liquid investments (~7%)
+My target was to beat the **savings account's Interest rate** for liquid, less volatile investments (~3%) and the **Inflation rate** for little risky/volatile/non-liquid investments (~7%)
 
 _That's it._
 
-I started investing (like a lot of people) post lockdown (during WFH) with one main thought in mind. 
-
-> At least the amount I am saving, due to WFH, will be invested and I don't care if I lose 100% of that which is almost impossible. 
+I started investing mainly (like a lot of people) post lockdown during WFH. I decided that at least the amount getting saved, due to WFH, will be invested. It will be fine if I lose 100% of that which is almost impossible. 
 
 Now, how to proceed? define these:
 - Risk appetite (I used surveys available online)
