@@ -30,7 +30,7 @@
           console.log(sign_up_email.value);
           if (sign_up_email.value) {
               $.ajax({
-                  url: "http://127.0.0.1:8080/signup",
+                  url: "https://gluu.site/signup",
                   type: "POST",
                   data: {"email": sign_up_email.value, "name": "Gluu.ai"},
                   success: function (result) {
