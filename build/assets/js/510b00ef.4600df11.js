@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_stoplight_elements=self.webpackChunkdocusaurus_stoplight_elements||[]).push([[7722],{9933:function(s){s.exports=JSON.parse('{"allTagsPath":"/build/blog/tags","slug":"/build/blog/tags/facebook","name":"facebook","count":1,"permalink":"/build/blog/tags/facebook"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_stoplight_elements=self.webpackChunkdocusaurus_stoplight_elements||[]).push([[7953],{47678:function(s){s.exports=JSON.parse('{"allTagsPath":"/build/blog/tags","slug":"/build/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/build/blog/tags/docusaurus"}')}}]);
