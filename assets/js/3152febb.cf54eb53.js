@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_stoplight_elements=self.webpackChunkdocusaurus_stoplight_elements||[]).push([[225],{43492:function(t){t.exports=JSON.parse('{"title":"Getting started","description":"Get started now","slug":"/category/getting-started","permalink":"/docs/category/getting-started","navigation":{"next":{"title":"Overview","permalink":"/docs/"}}}')}}]);
