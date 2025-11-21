@@ -13,6 +13,11 @@
             box-sizing: border-box;
         }
 
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, 
@@ -28,6 +33,8 @@
             color: #5a4a3a;
             position: relative;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         body::before {
@@ -82,6 +89,8 @@
             padding: 20px;
             position: relative;
             z-index: 1;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* Header Section */
@@ -94,6 +103,8 @@
             border-radius: 0;
             margin-bottom: 40px;
             box-shadow: none;
+            overflow-x: hidden;
+            width: 100%;
             backdrop-filter: none;
             border: none;
             overflow: visible;
@@ -267,6 +278,9 @@
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
             border: 1px solid rgba(224, 122, 95, 0.2);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .header .timer-unit::before {
@@ -321,7 +335,7 @@
         .carousel-section {
             margin: 40px 0;
             position: relative;
-            overflow: visible;
+            overflow: hidden;
             border-radius: 0;
             box-shadow: none;
             background: #FFF8F0;
@@ -1391,6 +1405,7 @@
 
             .header .timer-unit {
                 padding: 18px 25px;
+                max-width: 500px;
             }
 
             .header .timer-unit .timer-content {
@@ -1631,6 +1646,7 @@
 
             .header .timer-unit {
                 padding: 15px 20px;
+                max-width: 400px;
             }
 
             .header .timer-unit .timer-content {
@@ -1820,6 +1836,7 @@
 
             .header .timer-unit {
                 padding: 12px 15px;
+                max-width: 320px;
             }
 
             .header .timer-unit .timer-content {
