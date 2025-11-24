@@ -18,6 +18,138 @@
             width: 100%;
         }
 
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 1000;
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: visible;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .navbar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+        }
+
+        .navbar-line {
+            width: 24px;
+            height: 2px;
+            background-color: #828B7E;
+        }
+
+        .navbar-heart {
+            position: absolute;
+            left: 28px;
+            top: -2px;
+            width: 18px;
+            height: 18px;
+            background-color: #F5CBA7;
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-position: center;
+        }
+
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar-monogram {
+            position: relative;
+            padding: 15px 25px;
+            width: 120px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .navbar-monogram-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1.5px solid #828B7E;
+            transform: rotate(-5deg);
+        }
+
+        .navbar-monogram-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 100%;
+            height: 100%;
+            border: 1.5px solid #828B7E;
+            transform: rotate(3deg);
+        }
+
+        .navbar-monogram-leaf-top {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 20px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M20,100 Q30,80 40,90 T60,85 Q70,75 75,90 Q80,100 70,110 Q60,120 50,115 Q40,110 30,115 Q20,120 15,110 Q10,100 20,100' stroke='%23828B7E' fill='none' stroke-width='1.5'/%3E%3Cpath d='M35,95 Q45,85 50,95' stroke='%23828B7E' fill='none' stroke-width='1'/%3E%3Cpath d='M45,100 Q55,90 60,100' stroke='%23828B7E' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        .navbar-monogram-leaf-bottom {
+            position: absolute;
+            bottom: -8px;
+            right: -8px;
+            width: 20px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M20,100 Q30,80 40,90 T60,85 Q70,75 75,90 Q80,100 70,110 Q60,120 50,115 Q40,110 30,115 Q20,120 15,110 Q10,100 20,100' stroke='%23828B7E' fill='none' stroke-width='1.5'/%3E%3Cpath d='M35,95 Q45,85 50,95' stroke='%23828B7E' fill='none' stroke-width='1'/%3E%3Cpath d='M45,100 Q55,90 60,100' stroke='%23828B7E' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+            z-index: 2;
+        }
+
+        .navbar-monogram-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #F5CBA7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar-right {
+            width: 100px;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, 
@@ -85,7 +217,7 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 120px auto 0;
             padding: 20px;
             position: relative;
             z-index: 1;
@@ -171,7 +303,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 40px 0 30px;
+            margin: 40px 0 10px;
             position: relative;
             z-index: 2;
         }
@@ -184,18 +316,18 @@
             left: 50%;
             transform: translateX(-50%);
             width: 252px;
-            height: 300px;
+            height: 310px;
             border: 2px solid rgba(160, 130, 109, 0.4);
             border-bottom: none;
             border-radius: 126px 126px 0 0;
             z-index: -1;
         }
 
-        /* Leafy branch decoration - bottom right */
+        /* Leafy branch decoration - inside container */
         .timer-image-container::after {
             content: '';
             position: absolute;
-            bottom: -40px;
+            top: 20px;
             right: 20px;
             width: 80px;
             height: 100px;
@@ -218,6 +350,20 @@
             position: relative;
             padding: 0;
             line-height: 1.4;
+        }
+
+        .wedding-date {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 400;
+            color: #C85A3A;
+            margin-top: 15px;
+            text-align: center;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 0;
+            line-height: 1.4;
+            opacity: 0.9;
         }
 
         .timer-image {
@@ -268,8 +414,8 @@
         .header .timer-unit {
             background: rgba(255, 255, 255, 0.6);
             color: #8B4513;
-            padding: 15px 25px;
-            border-radius: 15px;
+            padding: 12px 15px;
+            border-radius: 12px;
             box-shadow: 
                 0 4px 15px rgba(224, 122, 95, 0.15);
             transition: all 0.3s ease;
@@ -278,8 +424,8 @@
             -webkit-tap-highlight-color: transparent;
             touch-action: manipulation;
             border: 1px solid rgba(224, 122, 95, 0.2);
-            width: 100%;
-            max-width: 600px;
+            width: 95%;
+            max-width: 520px;
             margin: 0 auto;
         }
 
@@ -307,7 +453,7 @@
         }
 
         .header .timer-unit .timer-content {
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 500;
             display: block;
             position: relative;
@@ -318,7 +464,7 @@
         }
 
         .header .timer-unit .timer-number {
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 600;
             color: #C85A3A;
         }
@@ -1343,7 +1489,52 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
+                margin-top: 100px;
                 padding: 15px;
+            }
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .navbar-menu {
+                gap: 4px;
+            }
+
+            .navbar-line {
+                width: 20px;
+                height: 1.5px;
+            }
+
+            .navbar-heart {
+                left: 24px;
+                top: -1px;
+                width: 16px;
+                height: 16px;
+            }
+
+            .navbar-monogram {
+                width: 100px;
+                height: 70px;
+                padding: 10px 14px;
+            }
+
+            .navbar-monogram-text {
+                font-size: 1.5em;
+            }
+
+            .navbar-monogram-leaf-top {
+                top: -6px;
+                left: -6px;
+                width: 18px;
+                height: 22px;
+            }
+
+            .navbar-monogram-leaf-bottom {
+                bottom: -6px;
+                right: -6px;
+                width: 18px;
+                height: 22px;
             }
 
             .header {
@@ -1377,6 +1568,11 @@
                 margin-top: 20px;
             }
 
+            .wedding-date {
+                font-size: 1em;
+                margin-top: 12px;
+            }
+
             .header::before {
                 width: 60px;
                 height: 80px;
@@ -1394,7 +1590,7 @@
             .timer-image-container::after {
                 width: 60px;
                 height: 80px;
-                bottom: -30px;
+                top: 15px;
                 right: 15px;
             }
 
@@ -1405,16 +1601,16 @@
             }
 
             .header .timer-unit {
-                padding: 18px 25px;
-                max-width: 500px;
+                padding: 12px 15px;
+                max-width: 440px;
             }
 
             .header .timer-unit .timer-content {
-                font-size: 1.35em;
+                font-size: 1.2em;
             }
 
             .header .timer-unit .timer-number {
-                font-size: 1.5em;
+                font-size: 1.35em;
             }
 
             .header .timer-unit .timer-label {
@@ -1599,7 +1795,52 @@
 
         @media (max-width: 480px) {
             .container {
+                margin-top: 60px;
                 padding: 10px;
+            }
+
+            .navbar {
+                padding: 24px 15px;
+            }
+
+            .navbar-left {
+                gap: 10px;
+            }
+
+            .navbar-line {
+                width: 18px;
+                height: 1.5px;
+            }
+
+            .navbar-heart {
+                left: 22px;
+                top: -1px;
+                width: 14px;
+                height: 14px;
+            }
+
+            .navbar-monogram {
+                width: 90px;
+                height: 40px;
+                padding: 8px 12px;
+            }
+
+            .navbar-monogram-text {
+                font-size: 1.3em;
+            }
+
+            .navbar-monogram-leaf-top {
+                top: -5px;
+                left: -5px;
+                width: 16px;
+                height: 20px;
+            }
+
+            .navbar-monogram-leaf-bottom {
+                bottom: -5px;
+                right: -5px;
+                width: 16px;
+                height: 20px;
             }
 
             .header {
@@ -1625,6 +1866,11 @@
                 margin-top: 18px;
             }
 
+            .wedding-date {
+                font-size: 0.95em;
+                margin-top: 10px;
+            }
+
             .header::before {
                 width: 50px;
                 height: 70px;
@@ -1638,24 +1884,26 @@
             .timer-image-container::after {
                 width: 50px;
                 height: 70px;
+                top: 12px;
+                right: 12px;
             }
 
             .header .timer {
                 gap: 0;
-                margin-top: 15px;
+                margin-top: 0px;
             }
 
             .header .timer-unit {
-                padding: 15px 20px;
-                max-width: 400px;
+                padding: 10px 15px;
+                max-width: 370px;
             }
 
             .header .timer-unit .timer-content {
-                font-size: 1.15em;
+                font-size: 1.05em;
             }
 
             .header .timer-unit .timer-number {
-                font-size: 1.3em;
+                font-size: 1.25em;
             }
 
             .header .timer-unit .timer-label {
@@ -1806,6 +2054,52 @@
         }
 
         @media (max-width: 360px) {
+            .container {
+                margin-top: 80px;
+            }
+
+            .navbar {
+                padding: 10px 12px;
+            }
+
+            .navbar-left {
+                gap: 8px;
+            }
+
+            .navbar-line {
+                width: 16px;
+                height: 1.5px;
+            }
+
+            .navbar-heart {
+                width: 14px;
+                height: 14px;
+            }
+
+            .navbar-monogram {
+                width: 80px;
+                height: 55px;
+                padding: 6px 10px;
+            }
+
+            .navbar-monogram-text {
+                font-size: 1.2em;
+            }
+
+            .navbar-monogram-leaf-top {
+                top: -4px;
+                left: -4px;
+                width: 14px;
+                height: 18px;
+            }
+
+            .navbar-monogram-leaf-bottom {
+                bottom: -4px;
+                right: -4px;
+                width: 14px;
+                height: 18px;
+            }
+
             .header h1 {
                 font-size: 1.5em;
             }
@@ -1818,6 +2112,11 @@
             .couple-names {
                 font-size: 1.4em;
                 margin-top: 15px;
+            }
+
+            .wedding-date {
+                font-size: 0.85em;
+                margin-top: 8px;
             }
 
             .header::before {
@@ -1833,19 +2132,21 @@
             .timer-image-container::after {
                 width: 40px;
                 height: 60px;
+                top: 10px;
+                right: 10px;
             }
 
             .header .timer-unit {
-                padding: 12px 15px;
-                max-width: 320px;
+                padding: 10px 12px;
+                max-width: 300px;
             }
 
             .header .timer-unit .timer-content {
-                font-size: 0.95em;
+                font-size: 0.9em;
             }
 
             .header .timer-unit .timer-number {
-                font-size: 1.1em;
+                font-size: 1.05em;
             }
 
             .header .timer-unit .timer-label {
@@ -1878,13 +2179,35 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-menu">
+                <div class="navbar-line"></div>
+                <div class="navbar-line"></div>
+                <div class="navbar-line"></div>
+            </div>
+            <div class="navbar-heart"></div>
+        </div>
+        <div class="navbar-center">
+            <div class="navbar-monogram">
+                <div class="navbar-monogram-frame">
+                    <div class="navbar-monogram-leaf-top"></div>
+                    <div class="navbar-monogram-leaf-bottom"></div>
+                </div>
+                <div class="navbar-monogram-text">A & B</div>
+            </div>
+        </div>
+        <div class="navbar-right"></div>
+    </nav>
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>Wedding Invitation</h1>
+            <h4><i>Please join us for our wedding of</i></h4>
             <div class="timer-image-container">
                 <img src="assets/images/pic1.jpeg" alt="Wedding" class="timer-image">
                 <div class="couple-names">Abhishek & Barkha</div>
+                <div class="wedding-date">February 22, 2025</div>
             </div>
             <div class="timer">
                 <div class="timer-unit">
