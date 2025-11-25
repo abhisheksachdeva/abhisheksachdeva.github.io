@@ -1222,7 +1222,7 @@
 
         .route-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #C29F55;
             margin: 0;
             font-weight: 600;
@@ -1275,6 +1275,34 @@
         }
 
         .route-time strong {
+            color: #C29F55;
+            font-weight: 600;
+        }
+
+        .route-time ul {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .route-time li {
+            color: #F0F0F0;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .route-time li::before {
+            content: '•';
+            font-weight: bold;
+            font-size: 1.2em;
+            position: absolute;
+            left: 8px;
+            line-height: 1.4;
+        }
+
+        .route-time li strong {
             color: #C29F55;
             font-weight: 600;
         }
@@ -1833,7 +1861,7 @@
             }
 
             .route-card h4 {
-                font-size: 1.3em;
+                font-size: 1.15em;
             }
 
             .route-card.expanded .route-card-content {
@@ -2098,7 +2126,7 @@
             }
 
             .route-card h4 {
-                font-size: 1.2em;
+                font-size: 1.05em;
             }
 
             .route-card-toggle {
@@ -2117,6 +2145,21 @@
                 font-size: 0.9em;
                 margin-top: 12px;
                 padding-top: 12px;
+            }
+
+            .route-time ul {
+                margin: 10px 0;
+            }
+
+            .route-time li {
+                margin-bottom: 8px;
+                padding-left: 22px;
+                line-height: 1.7;
+            }
+
+            .route-time li::before {
+                left: 6px;
+                font-size: 1.1em;
             }
 
             .map-container {
@@ -2487,53 +2530,95 @@
             
             <div class="routes-section">
                 <div class="routes-grid">
+
                     <div class="route-card">
                         <div class="route-card-header" onclick="toggleRoute(this)">
-                            <h4>From Bangalore via Delhi</h4>
+                            <h4>Delhi → Firozpur</h4>
                             <span class="route-card-toggle">▼</span>
                         </div>
                         <div class="route-card-content">
-                            <div class="route-path">
-                                <strong>Bangalore</strong> → <strong>Delhi</strong> → <strong>Firozpur</strong>
-                            </div>
                             <div class="route-time">
-                                <strong>Flight:</strong> Bangalore to Delhi<br>
-                                <strong>Train/Bus:</strong> Delhi to Firozpur
+                                Delhi to Firozpur takes around 7 hours.<br><br>
+
+                                <strong>Train:</strong> Delhi to Firozpur <br><br>
+                            <ul>
+                                <li>Patalkot Express (20423): Book for Saturday Morning, <strong>highly recommended</strong></li>
+                                <li>Punjab Mail (12137): Book for Friday night</li>
+                            </ul>
                             </div>
                         </div>
                     </div>
 
                     <div class="route-card">
                         <div class="route-card-header" onclick="toggleRoute(this)">
-                            <h4>From Bangalore via Chandigarh</h4>
+                            <h4>Bangalore → Amritsar → Firozpur</h4>
                             <span class="route-card-toggle">▼</span>
                         </div>
                         <div class="route-card-content">
-                            <div class="route-path">
-                                <strong>Bangalore</strong> → <strong>Chandigarh</strong> → <strong>Firozpur</strong>
-                            </div>
                             <div class="route-time">
-                                <strong>Flight:</strong> Bangalore to Chandigarh<br>
-                                <strong>Train/Bus:</strong> Chandigarh to Firozpur
+                                <strong>Flight:</strong> Bangalore to Amritsar<br><br>
+                                Amritsar to Firozpur takes around 2.5 hours.<br><br>
+                                <strong>Cab(Highly recommended):</strong> Book Uber/Ola intercity <br><br>
+                                Limited direct bus availability, no train options.
                             </div>
                         </div>
                     </div>
 
                     <div class="route-card">
                         <div class="route-card-header" onclick="toggleRoute(this)">
-                            <h4>From Bangalore via Amritsar</h4>
+                            <h4>Bangalore → Delhi → Firozpur</h4>
                             <span class="route-card-toggle">▼</span>
                         </div>
                         <div class="route-card-content">
-                            <div class="route-path">
-                                <strong>Bangalore</strong> → <strong>Amritsar</strong> → <strong>Firozpur</strong>
-                            </div>
                             <div class="route-time">
-                                <strong>Flight:</strong> Bangalore to Amritsar<br>
-                                <strong>Train/Bus:</strong> Amritsar to Firozpur
+                                <strong>Flight:</strong> Bangalore to Delhi<br><br>
+                                Delhi to Firozpur takes around 7 hours.<br><br>
+
+                                <strong>Train:</strong> Delhi to Firozpur <br>
+                                <ul>
+                                    <li>Patalkot Express (20423): Book for Saturday Morning, <strong>highly recommended</strong></li>
+                                    <li>Punjab Mail (12137): Book for Friday night</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+                    <div class="route-card">
+                        <div class="route-card-header" onclick="toggleRoute(this)">
+                            <h4>Bangalore → Chandigarh → Firozpur</h4>
+                            <span class="route-card-toggle">▼</span>
+                        </div>
+                        <div class="route-card-content">
+
+                            <div class="route-time">
+                                <strong>Flight:</strong> Bangalore to Chandigarh<br><br>
+
+                                Chandigarh to Firozpur takes around 4 hours.<br><br>
+                                <strong>Bus (recommended):</strong> Direct bus from ISBT sector 43, Book in advance<br>
+                                <strong>Cab (recommended):</strong> Book Uber/Ola intercity specially if in a group<br>
+                                <strong>Train (last option):</strong> Chandigarh to Firozpur - 14629 (Unreserved)<br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-card-header" onclick="toggleRoute(this)">
+                            <h4>Faridabad → Firozpur</h4>
+                            <span class="route-card-toggle">▼</span>
+                        </div>
+                        <div class="route-card-content">
+                            <div class="route-time">
+                                Faridabad to Firozpur takes around 9 hours.<br><br>
+                                <strong>Train:</strong> Faridabad to Firozpur <br><br>
+                            <ul>
+                                <li>Patalkot Express (20423): Book for Saturday Morning <u>from Delhi</u>, <strong>highly recommended</strong></li>
+                                <li>Punjab Mail (12137): Book for Friday night <u>from Faridabad</u></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
