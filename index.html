@@ -826,7 +826,6 @@
             align-items: center;
             margin-bottom: 50px;
             position: relative;
-            padding-left: 40px;
             animation: fadeInLeft 0.8s ease forwards;
             opacity: 0;
         }
@@ -847,67 +846,10 @@
             }
         }
 
-        .event-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 25px;
-            top: 90px;
-            width: 3px;
-            height: calc(100% + 10px);
-            background: linear-gradient(180deg, 
-                rgba(194, 159, 85, 0.5) 0%, 
-                rgba(194, 159, 85, 0.4) 50%, 
-                rgba(194, 159, 85, 0.5) 100%);
-            border-radius: 2px;
-        }
-
-        .event-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(194, 159, 85, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #C29F55;
-            font-size: 1.8em;
-            font-weight: 700;
-            position: absolute;
-            left: 0;
-            z-index: 3;
-            box-shadow: 0 2px 10px rgba(194, 159, 85, 0.3);
-            border: 2px solid rgba(194, 159, 85, 0.4);
-            font-family: 'Playfair Display', serif;
-            transition: all 0.3s ease;
-        }
-
-        .event-item:nth-child(2) .event-icon {
-            background: rgba(194, 159, 85, 0.2);
-            box-shadow: 0 2px 10px rgba(194, 159, 85, 0.3);
-            border: 2px solid rgba(194, 159, 85, 0.4);
-        }
-
-        .event-item:nth-child(3) .event-icon {
-            background: rgba(194, 159, 85, 0.2);
-            box-shadow: 0 2px 10px rgba(194, 159, 85, 0.3);
-            border: 2px solid rgba(194, 159, 85, 0.4);
-        }
-
-        .event-item:nth-child(4) .event-icon {
-            background: rgba(194, 159, 85, 0.2);
-            box-shadow: 0 2px 10px rgba(194, 159, 85, 0.3);
-            border: 2px solid rgba(194, 159, 85, 0.4);
-        }
-
-        .event-item:hover .event-icon {
-            transform: scale(1.15) rotate(5deg);
-        }
-
         .event-content {
             background: var(--bg-card-light);
             border-radius: 15px;
             padding: 30px 35px;
-            margin-left: 80px;
             flex: 1;
             box-shadow: 0 2px 10px rgba(194, 159, 85, 0.2);
             transition: all 0.3s ease;
@@ -1715,24 +1657,10 @@
             }
 
             .event-item {
-                padding-left: 25px;
                 margin-bottom: 35px;
             }
 
-            .event-item:not(:last-child)::after {
-                left: 20px;
-                top: 75px;
-                width: 4px;
-            }
-
-            .event-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3em;
-            }
-
             .event-content {
-                margin-left: 55px;
                 padding: 20px 18px;
                 border-radius: 18px;
             }
@@ -1994,18 +1922,10 @@
             }
 
             .event-item {
-                padding-left: 20px;
                 margin-bottom: 30px;
             }
 
-            .event-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2em;
-            }
-
             .event-content {
-                margin-left: 50px;
                 padding: 18px 15px;
             }
 
@@ -2335,7 +2255,6 @@
             <h2>🎉 Wedding Events</h2>
             <div class="events-path">
                 <div class="event-item">
-                    <div class="event-icon">1</div>
                     <div class="event-content">
                         <div class="event-icon-image"></div>
                         <div class="event-date">21st February - 11 AM</div>
@@ -2344,12 +2263,14 @@
                             <div class="event-detail-item">
                                 <strong>📍 Location:</strong> Hotel Gray Heights
                             </div>
+                            <div class="event-detail-item">
+                                <strong>🎨 Theme:</strong> Traditional Mehndi
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="event-item">
-                    <div class="event-icon">2</div>
                     <div class="event-content">
                         <div class="event-icon-image"></div>
                         <div class="event-date">21st February - 8 PM</div>
@@ -2358,12 +2279,14 @@
                             <div class="event-detail-item">
                                 <strong>📍 Location:</strong> Candlewood
                             </div>
+                            <div class="event-detail-item">
+                                <strong>🎨 Theme:</strong> Elegant Evening
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="event-item">
-                    <div class="event-icon">3</div>
                     <div class="event-content">
                         <div class="event-icon-image"></div>
                         <div class="event-date">22nd February - 10 AM</div>
@@ -2372,12 +2295,14 @@
                             <div class="event-detail-item">
                                 <strong>📍 Location:</strong> Kundan Farms
                             </div>
+                            <div class="event-detail-item">
+                                <strong>🎨 Theme:</strong> Vibrant Yellow
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="event-item">
-                    <div class="event-icon">4</div>
                     <div class="event-content">
                         <div class="event-icon-image"></div>
                         <div class="event-date">22nd February - 8 PM</div>
@@ -2385,6 +2310,9 @@
                         <div class="event-details">
                             <div class="event-detail-item">
                                 <strong>📍 Location:</strong> Greenfield
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>🎨 Theme:</strong> Royal Celebration
                             </div>
                         </div>
                     </div>
