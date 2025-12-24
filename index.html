@@ -1309,7 +1309,7 @@
 
         /* Hotels Section */
         .hotels-section {
-            display: block;
+            display: none;
             background: #0A192F;
             border-radius: 0;
             padding: 60px 50px;
@@ -1476,6 +1476,161 @@
         }
 
         .hotel-card .hotel-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(194, 159, 85, 0.5);
+            background: #E0B973;
+        }
+
+        /* Places to Visit Section */
+        .places-section {
+            display: block;
+            background: #0A192F;
+            border-radius: 0;
+            padding: 60px 50px;
+            margin: 40px 0;
+            box-shadow: none;
+            backdrop-filter: none;
+            border: none;
+            position: relative;
+            overflow: visible;
+        }
+
+        .places-section::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: 100px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M20,100 Q30,80 40,90 T60,85 Q70,75 75,90 Q80,100 70,110 Q60,120 50,115 Q40,110 30,115 Q20,120 15,110 Q10,100 20,100' stroke='%23C29F55' fill='none' stroke-width='1.5'/%3E%3Cpath d='M35,95 Q45,85 50,95' stroke='%23C29F55' fill='none' stroke-width='1'/%3E%3Cpath d='M45,100 Q55,90 60,100' stroke='%23C29F55' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .places-section::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 80px;
+            background: linear-gradient(135deg, 
+                rgba(194, 159, 85, 0.15) 0%, 
+                rgba(194, 159, 85, 0.1) 50%,
+                transparent 100%);
+            border-radius: 50% 20% 50% 30%;
+            clip-path: polygon(0 20%, 100% 0%, 90% 80%, 10% 100%);
+            z-index: 0;
+        }
+
+        .places-section h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 3em;
+            color: #C29F55;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .place-card {
+            background: rgba(10, 25, 47, 0.6);
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 2px 10px rgba(194, 159, 85, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(194, 159, 85, 0.3);
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .place-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                #0A192F 0%, 
+                #C29F55 50%, 
+                #0A192F 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .place-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .place-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(194, 159, 85, 0.3);
+            background: rgba(10, 25, 47, 0.8);
+            border-color: rgba(194, 159, 85, 0.5);
+        }
+
+        .place-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #C29F55;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .place-card p {
+            color: #F0F0F0;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .place-card .attractions {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(194, 159, 85, 0.4);
+        }
+
+        .place-card .attractions p {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .place-card .attractions strong {
+            color: #C29F55;
+            font-weight: 600;
+        }
+
+        .place-card .place-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #C29F55;
+            color: #0A192F;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(194, 159, 85, 0.4);
+        }
+
+        .place-card .place-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(194, 159, 85, 0.5);
             background: #E0B973;
@@ -1766,7 +1921,8 @@
 
             .events-section,
             .location-section,
-            .hotels-section {
+            .hotels-section,
+            .places-section {
                 padding: 35px 20px;
                 border-radius: 25px;
                 margin: 25px 0;
@@ -1794,7 +1950,8 @@
 
             .events-section h2,
             .location-section h2,
-            .hotels-section h2 {
+            .hotels-section h2,
+            .places-section h2 {
                 font-size: 2em;
                 margin-bottom: 35px;
             }
@@ -1883,32 +2040,38 @@
                 border-radius: 18px;
             }
 
-            .hotels-grid {
+            .hotels-grid,
+            .places-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
 
-            .hotel-card {
+            .hotel-card,
+            .place-card {
                 padding: 25px 20px;
                 border-radius: 20px;
             }
 
-            .hotel-card h3 {
+            .hotel-card h3,
+            .place-card h3 {
                 font-size: 1.5em;
                 margin-bottom: 15px;
             }
 
-            .hotel-card p {
+            .hotel-card p,
+            .place-card p {
                 font-size: 0.95em;
                 line-height: 1.7;
             }
 
-            .hotel-card .contact {
+            .hotel-card .contact,
+            .place-card .attractions {
                 margin-top: 15px;
                 padding-top: 15px;
             }
 
-            .hotel-card .contact p {
+            .hotel-card .contact p,
+            .place-card .attractions p {
                 font-size: 0.9em;
             }
 
@@ -2061,13 +2224,15 @@
 
             .events-section,
             .location-section,
-            .hotels-section {
+            .hotels-section,
+            .places-section {
                 padding: 30px 15px;
             }
 
             .events-section h2,
             .location-section h2,
-            .hotels-section h2 {
+            .hotels-section h2,
+            .places-section h2 {
                 font-size: 1.7em;
                 margin-bottom: 30px;
             }
@@ -2179,15 +2344,18 @@
                 height: 250px;
             }
 
-            .hotel-card {
+            .hotel-card,
+            .place-card {
                 padding: 20px 18px;
             }
 
-            .hotel-card h3 {
+            .hotel-card h3,
+            .place-card h3 {
                 font-size: 1.3em;
             }
 
-            .hotel-card p {
+            .hotel-card p,
+            .place-card p {
                 font-size: 0.9em;
             }
 
@@ -2343,7 +2511,8 @@
 
             .events-section h2,
             .location-section h2,
-            .hotels-section h2 {
+            .hotels-section h2,
+            .places-section h2 {
                 font-size: 1.5em;
             }
 
@@ -2407,6 +2576,9 @@
             </li>
             <li class="navbar-menu-item" onclick="scrollToSection('hotels')">
                 <span>Hotels</span>
+            </li>
+            <li class="navbar-menu-item" onclick="scrollToSection('places')">
+                <span>Places to visit</span>
             </li>
         </ul>
     </div>
@@ -2701,6 +2873,50 @@
                         <p><strong>📞 Contact:</strong> +91-XXX-XXXXXXX</p>
                     </div>
                     <a href="https://example.com/" class="hotel-link" target="_blank">Location</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Places to Visit Section -->
+        <div class="places-section" id="places">
+            <h2>Places to Visit</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <h3>Firozpur</h3>
+                    <p>Explore the historic city of Firozpur, known for its rich cultural heritage and significant historical landmarks.</p>
+                    <div class="attractions">
+                        <p><strong>Must Visit:</strong></p>
+                        <p>• Gurudwara Jamni sahib - Associated with Guru Gobind Singh Ji's visit</p>
+                        <p>• Saragarhi Memorial - A tribute to the 21 Sikh soldiers</p>
+                        <p>• Hussainiwala Border - Witness the flag lowering ceremony</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Firozpur,+Punjab" class="place-link" target="_blank">Explore on Map</a>
+                </div>
+
+                <div class="place-card">
+                    <h3>Amritsar</h3>
+                    <p>Visit the spiritual capital of Punjab, home to the Golden Temple and rich Sikh heritage. Just 2.5 hours from Firozpur.</p>
+                    <div class="attractions">
+                        <p><strong>Must Visit:</strong></p>
+                        <p>• Golden Temple (Harmandir Sahib) - The holiest Sikh shrine</p>
+                        <p>• Jallianwala Bagh - Historical memorial</p>
+                        <p>• Wagah Border - Witness the flag lowering ceremony</p>
+                        <p>• Amritsar Street Food - Try authentic Punjabi delicacies</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Amritsar,+Punjab" class="place-link" target="_blank">Explore on Map</a>
+                </div>
+
+                <div class="place-card">
+                    <h3>Chandigarh</h3>
+                    <p>Experience the planned city designed by Le Corbusier, known for its modern architecture and beautiful gardens. About 4 hours from Firozpur.</p>
+                    <div class="attractions">
+                        <p><strong>Must Visit:</strong></p>
+                        <p>• Rock Garden - Unique sculpture garden made from waste</p>
+                        <p>• Sukhna Lake - Beautiful lake for boating and walks</p>
+                        <p>• Rose Garden - Asia's largest rose garden</p>
+                        <p>• Gedi route 😉</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Chandigarh" class="place-link" target="_blank">Explore on Map</a>
                 </div>
             </div>
         </div>
