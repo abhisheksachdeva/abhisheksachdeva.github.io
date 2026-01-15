@@ -296,6 +296,17 @@
             z-index: 0;
         }
 
+        /* Ensure confetti appears in front */
+        canvas {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            pointer-events: none !important;
+            z-index: 9999 !important;
+        }
+
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -2734,9 +2745,11 @@
                         <div class="event-icon-image"></div>
                         <div class="event-date">21st February - 8 PM</div>
                         <div class="event-name">Ring Ceremony</div>
+                        <h4 style="font-size: 0.8em;">(After party? 😏)</h4>
+
                         <div class="event-details">
                             <div class="event-detail-item">
-                                <strong>Theme:</strong> As Rihanna didi says, shine bright like diamond
+                                <strong>Theme:</strong>Western. As Rihanna didi says, shine bright like diamond
                             </div>
                             <div class="event-detail-item">
                                 <strong> Location:</strong> Candlewood
@@ -2945,6 +2958,8 @@
         <!-- Places to Visit Section -->
         <div class="places-section" id="places">
             <h2>Places to explore</h2>
+            Irresepective of the place you visit, have Amritsari Kulcha and Punjabi Lassi.🤤
+            <br></br>
             <div class="places-grid">
                 <div class="place-card">
                     <h3>Firozpur</h3>
@@ -3083,6 +3098,59 @@
                 menu.classList.remove('active');
                 dropdown.classList.remove('active');
             }
+        });
+    </script>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+        // Trigger confetti on page load
+        window.addEventListener('load', function() {
+            const duration = 2500; // 2.5 seconds
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 10, spread: 360, ticks: 50, zIndex: 9999 };
+            
+            // Ensure confetti canvas appears in front
+            setTimeout(() => {
+                const canvas = document.querySelector('canvas');
+                if (canvas) {
+                    canvas.style.position = 'fixed';
+                    canvas.style.top = '0';
+                    canvas.style.left = '0';
+                    canvas.style.width = '100%';
+                    canvas.style.height = '100%';
+                    canvas.style.pointerEvents = 'none';
+                    canvas.style.zIndex = '9999';
+                }
+            }, 100);
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 30 * (timeLeft / duration);
+                
+                // Launch confetti from left
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+                });
+                
+                // Launch confetti from right
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+                });
+            }, 300);
         });
     </script>
 </body>
