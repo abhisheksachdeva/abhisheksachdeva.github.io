@@ -3016,15 +3016,8 @@
     <script>
         // Wedding date: 22nd February (assuming current year or next year)
         function getWeddingDate() {
-            const now = new Date();
-            const currentYear = now.getFullYear();
-            const weddingDate = new Date(currentYear, 1, 22, 21, 0, 0); // February 22, 6 PM
-            
-            // If the date has passed this year, set it for next year
-            if (weddingDate < now) {
-                weddingDate.setFullYear(currentYear + 1);
-            }
-            
+            // Wedding date: February 22, 2026, 9 PM
+            const weddingDate = new Date(2026, 1, 22, 21, 0, 0);
             return weddingDate;
         }
 
@@ -3033,6 +3026,18 @@
         function updateTimer() {
             const now = new Date();
             const timeLeft = weddingDate - now;
+
+            // If wedding date has passed, show zeros
+            if (timeLeft <= 0) {
+                const timerDisplay = document.getElementById('timer-display');
+                timerDisplay.innerHTML = `
+                    <span class="timer-number">00</span><span class="timer-label"> Days </span>
+                    <span class="timer-number">00</span><span class="timer-label"> Hours </span>
+                    <span class="timer-number">00</span><span class="timer-label"> Minutes </span>
+                    <span class="timer-number">00</span><span class="timer-label"> Seconds</span>
+                `;
+                return;
+            }
 
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
